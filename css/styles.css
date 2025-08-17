@@ -58,20 +58,12 @@
     }
 }
 /* --- Responsive Styles --- */
-.logo {
-    max-width: 100%;
-    height: auto;
-}
 
 .logo-titulo-container, .header, header {
     flex-wrap: wrap;
 }
 
 
-.contenedor2 {
-    flex-wrap: wrap;
-    gap: 16px;
-}
 
 .contenedor {
         display: grid;
@@ -101,11 +93,6 @@
     }
 }
 
-.mapa {
-    width: 100%;
-    max-width: 100vw;
-    height: 300px;
-}
 
 @media (max-width: 900px) {
     header {
@@ -241,9 +228,6 @@ nav ul {
     justify-content: center;
     width: 100%;
 }
-nav li {
-    font-size: 1.1rem;
-}
 nav a {
     text-shadow: 0 2px 8px rgba(0,0,0,0.35), 0 1px 0 #222;
     text-decoration: none;
@@ -315,11 +299,6 @@ div{
     font-weight: bold;
 }
 
-li {
-    display: inline-block;
-    margin: 60px;
-margin: 10px;
-}
 
 li a{color: rgb(30, 7, 161);
 text-decoration: none;
