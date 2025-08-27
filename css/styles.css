@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1.header-title, header h1, h2.header-title, h3.header-title, h4.header-title, h5.header-title, h6.header-title {
   font-size: 2.1rem;
-  color: #fff;
+  color: #f0eded;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35), 0 1px 0 #222;
   width: 100%;
   margin: 0;
@@ -99,7 +99,7 @@ header {
 header .logo {
   width: 60px;
   height: 60px;
-  background-color: #fff;
+  background-color: #f0eded;
   margin-right: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   display: block;
@@ -122,7 +122,7 @@ header nav ul li {
 }
 header nav ul li .nav-btn {
   background: #1a2a3a;
-  color: #fff !important;
+  color: #f0eded !important;
   border: none;
   border-radius: 8px;
   padding: 10px 22px;
@@ -184,7 +184,7 @@ header nav ul li a:not(.nav-btn) {
     text-shadow: 0 0 0 #0a1a3a;
   }
   100% {
-    text-shadow: 0 0 12px #0a1a3a, 0 0 4px #fff;
+    text-shadow: 0 0 12px #0a1a3a, 0 0 4px #f0eded;
   }
 }
 @keyframes iconGlow {
@@ -353,7 +353,7 @@ footer .footer-icons a:hover, footer .footer-icons a:focus {
 }
 footer .footer-icons a:hover {
   background: #1a2a3a;
-  color: #fff !important;
+  color: #f0eded !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   transform: translateY(-6px) scale(1.08);
 }
@@ -390,5 +390,6 @@ footer .footer-icons a img {
     font-size: 1rem;
   }
 }
+/* Fin de los estilos completos */
 
 /*# sourceMappingURL=styles.css.map */
