@@ -331,7 +331,7 @@ footer .footer-icons {
   margin: 18px 0 0 0;
 }
 footer .footer-icons a {
-  background: rgba(255, 255, 255, 0.85);
+  background: transparent;
   color: #1a2a3a !important;
   border: none;
   border-radius: 8px;
@@ -346,13 +346,14 @@ footer .footer-icons a {
   width: 54px;
   height: 54px;
   padding: 0;
+  background: transparent !important;
 }
 footer .footer-icons a:hover, footer .footer-icons a:focus {
-  background: rgba(229.5, 229.5, 229.5, 0.85);
+  background: rgba(0, 0, 0, 0);
   transform: translateY(-2px) scale(1.04);
 }
 footer .footer-icons a:hover {
-  background: #1a2a3a;
+  background: #1a2a3a !important;
   color: #f0eded !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   transform: translateY(-6px) scale(1.08);

@@ -13,7 +13,7 @@ $color-text-secondary: #05132f;
 $color-background: rgb(83, 133, 91);
 $color-footer-bg: #f8f9fa;
 $color-footer-text: #6c757d;
-$color-whatsapp-bg: rgba(255,255,255,0.85);
+$color-whatsapp-bg: transparent;
 
 // Tamaños
 $header-height: 320px;
@@ -430,9 +430,10 @@ footer {
       width: 54px;
       height: 54px;
       padding: 0;
+      background: transparent !important; // Asegurar que no haya fondo blanco
       
       &:hover {
-        background: $color-principal;
+        background: $color-principal !important;
         color: $color-secundario !important;
         box-shadow: 0 4px 16px rgba(0,0,0,0.18);
         transform: translateY(-6px) scale(1.08);
