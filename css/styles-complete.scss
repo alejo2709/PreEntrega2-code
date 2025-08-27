@@ -1,0 +1,482 @@
+@import url('menu-hamburguesa.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+// ============================
+// VARIABLES SASS
+// ============================
+$font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+$color-principal: #1a2a3a;
+$color-secundario: #fff;
+$color-hover: #3a5a7a;
+$color-text: #23272f;
+$color-text-secondary: #05132f;
+$color-background: rgb(83, 133, 91);
+$color-footer-bg: #f8f9fa;
+$color-footer-text: #6c757d;
+$color-whatsapp-bg: rgba(255,255,255,0.85);
+
+// Tamaños
+$header-height: 320px;
+$header-min-height: 220px;
+$logo-size: 60px;
+$logo-size-mobile: 40px;
+$whatsapp-size: 48px;
+$whatsapp-size-mobile: 36px;
+
+// Sombras y efectos
+$shadow-light: 0 1px 4px rgba(0,0,0,0.08);
+$shadow-medium: 0 2px 8px rgba(0,0,0,0.10);
+$shadow-heavy: 0 4px 24px rgba(0,0,0,0.10);
+$radius: 8px;
+$radius-circle: 50%;
+$transition: 0.2s;
+
+// ============================
+// MIXINS
+// ============================
+@mixin button-style($bg-color, $text-color, $hover-bg: null) {
+  background: $bg-color;
+  color: $text-color !important;
+  border: none;
+  border-radius: $radius;
+  padding: 10px 22px;
+  font-weight: 600;
+  box-shadow: $shadow-medium;
+  transition: background $transition, transform $transition;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 4px;
+  display: inline-block;
+  
+  &:hover,
+  &:focus {
+    @if $hover-bg {
+      background: $hover-bg;
+    } @else {
+      background: darken($bg-color, 10%);
+    }
+    transform: translateY(-2px) scale(1.04);
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-shadow-strong {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35), 0 1px 0 #222;
+}
+
+@mixin responsive-size($desktop, $mobile) {
+  width: $desktop;
+  height: $desktop;
+  
+  @media (max-width: 600px) {
+    width: $mobile;
+    height: $mobile;
+  }
+}
+
+// ============================
+// EXTENDS (PLACEHOLDER SELECTORS)
+// ============================
+%flex-center {
+  @include flex-center;
+}
+
+%montserrat-font {
+  font-family: $font-family;
+}
+
+%reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%circle-element {
+  border-radius: $radius-circle;
+  object-fit: cover;
+}
+
+%fixed-element {
+  position: fixed;
+  z-index: 3000;
+}
+
+// ============================
+// ESTILOS GLOBALES
+// ============================
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @extend %montserrat-font;
+  font-size: 18px;
+  line-height: 1.7;
+  color: $color-text;
+  background-color: $color-background;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %montserrat-font;
+  font-weight: 700;
+  color: $color-principal;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  
+  &.header-title {
+    font-size: 2.1rem;
+    color: $color-secundario;
+    @include text-shadow-strong;
+    width: 100%;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+}
+
+p, li, label, input, textarea, button, a {
+  @extend %montserrat-font;
+  font-size: 1em;
+  color: $color-text-secondary;
+  line-height: 1.7;
+}
+
+// Estilos específicos para elementos de texto
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+// ============================
+// HEADER
+// ============================
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: $shadow-heavy;
+  border-radius: 0 0 18px 18px;
+  @extend %flex-center;
+  flex-direction: column;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  height: $header-height;
+  min-height: $header-min-height;
+  gap: 16px;
+  
+  .logo {
+    @include responsive-size($logo-size, $logo-size-mobile);
+    background-color: $color-secundario;
+    @extend %circle-element;
+    margin-right: 20px;
+    box-shadow: $shadow-light;
+    display: block;
+  }
+  
+  h1 {
+    @extend .header-title;
+  }
+  
+  // Navegación anidada
+  nav {
+    ul {
+      @extend %reset-list;
+      @extend %flex-center;
+      flex-direction: row;
+      gap: 18px;
+      width: 100%;
+      
+      li {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 18px;
+        
+        .nav-btn {
+          @include button-style($color-principal, $color-secundario, $color-hover);
+        }
+        
+        a {
+          @include text-shadow-strong;
+          text-decoration: none;
+          padding: 7px 16px;
+          border-radius: 6px;
+          transition: background $transition, color $transition;
+          font-weight: 600;
+          color: #a5c4b0 !important;
+          
+          &.active {
+            color: #0a1a3a !important;
+            position: relative;
+            animation: activeLinkPulse 1.2s infinite alternate;
+          }
+          
+          &:not(.nav-btn) {
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+  
+  // Media queries anidadas
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px 8px 8px 8px;
+    
+    nav ul {
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    padding: 10px 4px 4px 4px;
+    
+    h1 {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// ============================
+// ANIMACIONES
+// ============================
+@keyframes activeLinkPulse {
+  0% { text-shadow: 0 0 0 #0a1a3a; }
+  100% { text-shadow: 0 0 12px #0a1a3a, 0 0 4px $color-secundario; }
+}
+
+@keyframes iconGlow {
+  0% { box-shadow: 0 0 0 #0a1a3acc; }
+  100% { box-shadow: 0 0 16px 8px #0a1a3acc, 0 2px 8px rgba(0,0,0,0.13); }
+}
+
+// ============================
+// CONTENEDORES PRINCIPALES
+// ============================
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto 32px auto;
+  
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    
+    iframe {
+      width: 98vw !important;
+      height: 220px !important;
+      margin: 0 auto;
+    }
+    
+    p {
+      max-width: 98vw;
+      padding: 14px 8px;
+    }
+  }
+}
+
+.contenedor2 {
+  @extend %flex-center;
+}
+
+// ============================
+// ELEMENTOS ESPECÍFICOS
+// ============================
+.baner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.mapa {
+  height: 300px;
+  width: 100%;
+  max-width: 100vw;
+  
+  @media (max-width: 900px) {
+    height: 200px;
+  }
+  
+  @media (max-width: 600px) {
+    height: 120px;
+  }
+}
+
+.Baterias {
+  height: 653px;
+  width: 1000px;
+  
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+
+.bateria-litio {
+  width: 280px;
+  height: 280px;
+  margin: 10px;
+  @extend %circle-element;
+  box-shadow: $shadow-light;
+}
+
+.image {
+  width: 280px;
+  margin: 10px;
+  
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+
+.foto {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+
+// ============================
+// WHATSAPP FLOTANTE
+// ============================
+.whatsapp {
+  @extend %fixed-element;
+  right: 20px;
+  bottom: 20px;
+  
+  img {
+    @include responsive-size($whatsapp-size, $whatsapp-size-mobile);
+    transition: transform $transition;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+// ============================
+// FOOTER
+// ============================
+footer {
+  background-color: $color-footer-bg;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: $color-footer-text;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1000;
+  
+  .footer-icons {
+    @extend %flex-center;
+    gap: 32px;
+    margin: 18px 0 0 0;
+    
+    a {
+      @include button-style($color-whatsapp-bg, $color-principal);
+      @extend %circle-element;
+      width: 54px;
+      height: 54px;
+      padding: 0;
+      
+      &:hover {
+        background: $color-principal;
+        color: $color-secundario !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        transform: translateY(-6px) scale(1.08);
+      }
+      
+      &.active {
+        background: #0a1a3a !important;
+        box-shadow: 0 0 16px 4px #0a1a3acc, 0 2px 8px rgba(0,0,0,0.13);
+        animation: iconGlow 1.2s infinite alternate;
+      }
+      
+      img {
+        width: 32px;
+        height: 32px;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));
+      }
+    }
+    
+    @media (max-width: 700px) {
+      gap: 16px;
+      margin: 10px 0 0 0;
+      
+      a {
+        width: 40px;
+        height: 40px;
+        
+        img {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}
+
+// ============================
+// MEDIA QUERIES FINALES
+// ============================
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+  
+  h2, h3 {
+    font-size: 1rem;
+  }
+}
