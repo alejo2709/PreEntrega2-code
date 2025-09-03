@@ -114,10 +114,11 @@ nav a.active {
       </script>
 
 
-<a href="https://api.whatsapp.com/send?phone=59897537913" class="whatsapp-float" target="_blank" title="WhatsApp">
-    <img src="../assets/iconos/whatsapp.png" alt="WhatsApp Icon">
-</a>
-    
+<div class="whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=59897537913" target="_blank">
+            <img src="../assets/iconos/whatsapp.png" alt="WhatsApp Icon">
+        </a>
+</div>
 
     <footer>
         <div>
@@ -144,107 +145,6 @@ nav a.active {
             </a>
         </div>
         </div>
-
-    <style>
-        /* Botón flotante de WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-            z-index: 3000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 62px;
-            height: 62px;
-            background: #25d366;
-            border-radius: 50%;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-            text-decoration: none;
-        }
-        .whatsapp-float:hover {
-            background: #128c7e;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.22);
-            transform: scale(1.08);
-        }
-        .whatsapp-float img {
-            width: 36px;
-            height: 36px;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));
-        }
-        @media (max-width: 700px) {
-            .whatsapp-float {
-                width: 46px;
-                height: 46px;
-                right: 10px;
-                bottom: 10px;
-            }
-            .whatsapp-float img {
-                width: 26px;
-                height: 26px;
-            }
-        }
-            /* Formulario Bootstrap flotante sobre imagen */
-            @media (max-width: 700px) {
-                .position-relative[style*="min-height"] img {
-                    height: 180px !important;
-                }
-                .position-absolute[style*="max-width"] {
-                    max-width: 98vw !important;
-                }
-            }
-    .footer-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 32px;
-        margin: 18px 0 0 0;
-    }
-    .footer-icons a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255,255,255,0.85);
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.13);
-        width: 54px;
-        height: 54px;
-        transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-        text-decoration: none;
-    }
-    .footer-icons a:hover {
-        background: #1a2a3a;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-        transform: translateY(-6px) scale(1.08);
-    }
-    .footer-icons img {
-        width: 32px;
-        height: 32px;
-        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));
-    }
-    @media (max-width: 700px) {
-        .footer-icons {
-            gap: 16px;
-            margin: 10px 0 0 0;
-        }
-        .footer-icons a {
-            width: 40px;
-            height: 40px;
-        }
-        .footer-icons img {
-            width: 22px;
-            height: 22px;
-        }
-        footer > div > div {
-            max-width: 98vw !important;
-            height: 72px !important;
-        }
-        footer video.baner {
-            height: 72px !important;
-        }
-    }
-    </style>
     </footer>
 </body>
 
