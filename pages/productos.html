@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productos</title>
         <!-- CSS-->
-        <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles-complete.css">
+-    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <style>
 nav a.active {
@@ -24,6 +25,53 @@ nav a.active {
 @keyframes iconGlow {
     0% { box-shadow: 0 0 0 #0a1a3acc; }
     100% { box-shadow: 0 0 16px 8px #0a1a3acc, 0 2px 8px rgba(0,0,0,0.13); }
+}
+
+/* Estilos para menú hamburguesa */
+.menu-hamburguesa {
+    display: none; /* Oculto por defecto en desktop */
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 200;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+nav ul {
+    display: flex;
+    position: relative;
+}
+
+nav ul.activo {
+    display: flex !important;
+    flex-direction: column;
+    background: #1a9a4b;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    border-radius: 12px;
+    border: 1px solid #e0e7ef;
+    padding: 8px 0;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    min-width: 180px;
+    z-index: 100;
+}
+
+@media (max-width: 700px) {
+    .menu-hamburguesa {
+        display: block !important; /* Mostrar solo en móvil */
+    }
+    
+    nav ul {
+        display: none !important;
+    }
+    
+    nav ul.activo {
+        display: flex !important;
+    }
 }
 </style>
 <style>
@@ -46,25 +94,27 @@ nav a.active {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/menu-hamburguesa.css">
 </head>
 <body>
         <header style="position:relative;">
             <div><video class="baner" autoplay loop muted>
-                <source src="/assets/videos/Relaxing_Green_Smoke_Background_-_Free_Looping_Motion_Graphic_Screensaver(720p).mp4" type="video/mp4">
+                <source src="../assets/videos/verde.mp4" type="video/mp4">
             </video></div>
             <div>
-                <img class="logo" src="/assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo">
+                <img class="logo" src="../assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo">
             </div>
             <h1>Con E-vo fabricamos energía</h1>
             <button class="menu-hamburguesa" id="btnMenu" aria-label="Abrir menú">
-                <img src="/assets/iconos/3844437-hamburger-list-menu-more-navigation_110311.ico" alt="Menú" />
+                <img src="../assets/iconos/3844437-hamburger-list-menu-more-navigation_110311.ico" alt="Menú" style="width: 32px; height: 32px; filter: brightness(0) invert(1);" />
             </button>
             <nav>
     <ul id="menuNav">
-        <li><a class="nav-btn" href="/pages/productos.html">productos</a></li>
-        <li><a class="nav-btn" href="/pages/nuestro equipo.html">nuestro equipo</a></li>
-        <li><a class="nav-btn" href="/pages/ubicanos.html">ubicanos</a></li>
-        <li><a class="nav-btn" href="/pages/contacto.html">contacto</a></li>
+        <li><a class="nav-btn" href="../index.html">inicio</a></li>
+        <li><a class="nav-btn" href="./productos.html">productos</a></li>
+        <li><a class="nav-btn" href="./nuestro_equipo.html">nuestro equipo</a></li>
+        <li><a class="nav-btn" href="./ubicanos.html">ubicanos</a></li>
+        <li><a class="nav-btn" href="./contacto.html">contacto</a></li>
     </ul>
     </nav>
         </header>
@@ -74,7 +124,7 @@ nav a.active {
 
         <div class="productos-grid">
             <div class="producto-card">
-                <img src="/assets/img/f1d6167a-4198-4c8c-a263-fdc0b976805d.jpg" alt="Batería de Litio 60V 12Ah">
+                <img src="../assets/img/f1d6167a-4198-4c8c-a263-fdc0b976805d.jpg" alt="Batería de Litio 60V 12Ah">
                 <h5>Batería de Litio 60V 12Ah</h5>
                 <p>Ideal para motos eléctricas City Coco, City, Urban y otros modelos. Más autonomía, potencia constante y menor tiempo de carga.<br>
                 <b>Voltaje:</b> 60V<br>
@@ -85,7 +135,7 @@ nav a.active {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="/assets/img/33432885-7acb-49b3-aaa6-8b5c59dcef46.jpg" alt="Batería de Litio 48V 12Ah">
+                <img src="../assets/img/33432885-7acb-49b3-aaa6-8b5c59dcef46.jpg" alt="Batería de Litio 48V 12Ah">
                 <h5>Batería de Litio 48V 12Ah</h5>
                 <p>Para bicicletas eléctricas, scooters y más. Celdas clase A de alta descarga.<br>
                 <b>Voltaje:</b> 48V<br>
@@ -95,7 +145,7 @@ nav a.active {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="/assets/img/b23a0806-ad9a-40f1-b44c-8c571ccb52ef.jpg" alt="Batería de Litio 60V 25Ah">
+                <img src="../assets/img/b23a0806-ad9a-40f1-b44c-8c571ccb52ef.jpg" alt="Batería de Litio 60V 25Ah">
                 <h5>Batería de Litio 60V 25Ah</h5>
                 <p>Para scooters y motos eléctricas de media y alta potencia.<br>
                 <b>Voltaje:</b> 60V<br>
@@ -105,7 +155,7 @@ nav a.active {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="/assets/img/83fbfe96-fb76-48e0-9784-c530a4efcfec.jpg" alt="Cubiertas Macizas Xiaomi">
+                <img src="../assets/img/83fbfe96-fb76-48e0-9784-c530a4efcfec.jpg" alt="Cubiertas Macizas Xiaomi">
                 <h5>Cubiertas Macizas Xiaomi</h5>
                 <p>Olvidate de los pinchazos y el mantenimiento. Compatibles con modelos Xiaomi M365, Pro, 1S.<br>
                 <b>Material:</b> Goma maciza de alta resistencia<br>
@@ -115,7 +165,7 @@ nav a.active {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="/assets/img/39b6af59-d05a-4319-ad50-54cf49881d16.jpg" alt="Celdas 18650 DL 2500mAh">
+                <img src="../assets/img/39b6af59-d05a-4319-ad50-54cf49881d16.jpg" alt="Celdas 18650 DL 2500mAh">
                 <h5>Celdas 18650 DL 2500mAh</h5>
                 <p>Alta descarga y versatilidad para proyectos de energía portátil.<br>
                 <b>Capacidad:</b> 2500mAh<br>
@@ -174,34 +224,34 @@ nav a.active {
 
     </main>
 
-<div class="whatsapp">
+        <div class="whatsapp">
         <a href="https://api.whatsapp.com/send?phone=59897537913" target="_blank">
-            <img src="/assets/iconos/whatsapp.png" alt="WhatsApp Icon">
+            <img src="../assets/iconos/whatsapp.png" alt="WhatsApp" style="width: 48px; height: 48px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));">
         </a>
-</div>
+    </div>    
 
     <footer>
         <div>
         <div style="width:100%;max-width:750px;margin:0 auto 14px auto;overflow:hidden;border-radius:16px;box-shadow:0 2px 14px rgba(0,0,0,0.10);">
             <video class="baner" autoplay loop muted style="width:100%;height:120px;object-fit:cover;display:block;">
-                <source src="/assets/videos/Relaxing_Green_Smoke_Background_-_Free_Looping_Motion_Graphic_Screensaver(720p).mp4" type="video/mp4">
+                <source src="../assets/videos/verde.mp4" type="video/mp4">
             </video>
         </div>
         <div class="footer-icons">
-            <a href="/index.html" title="Inicio">
-                <img src="/assets/iconos/hogar.png" alt="Inicio" />
+            <a href="../index.html" title="Inicio">
+                <img src="../assets/iconos/hogar.png" alt="Inicio" />
             </a>
-            <a href="/pages/productos.html" title="Productos" class="active">
-                <img src="/assets/iconos/bateria.png" alt="Productos" />
+            <a href="./productos.html" title="Productos" class="active">
+                <img src="../assets/iconos/bateria.png" alt="Productos" />
             </a>
-            <a href="/pages/nuestro equipo.html" title="Nuestro equipo">
-                <img src="/assets/iconos/equipo.png" alt="Equipo" />
+            <a href="./nuestro_equipo.html" title="Nuestro equipo">
+                <img src="../assets/iconos/equipo.png" alt="Equipo" />
             </a>
-            <a href="/pages/ubicanos.html" title="Ubícanos">
-                <img src="/assets/iconos/ubicacion-del-terreno.png" alt="Ubícanos" />
+            <a href="./ubicanos.html" title="Ubícanos">
+                <img src="../assets/iconos/ubicacion-del-terreno.png" alt="Ubícanos" />
             </a>
-            <a href="/pages/contacto.html" title="Contacto">
-                <img src="/assets/iconos/libreta-de-direcciones.png" alt="Contacto" />
+            <a href="./contacto.html" title="Contacto">
+                <img src="../assets/iconos/libreta-de-direcciones.png" alt="Contacto" />
             </a>
         </div>
         </div>
@@ -263,15 +313,22 @@ nav a.active {
 </body>
     <!-- Bootstrap JS Bundle (opcional, para componentes interactivos) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6DQD1KQ9Q8cb5p+G9Cl+Y7SA7An0s5L8Qw5yXW+0WLoK" crossorigin="anonymous"></script>
+    
+    <script>
+    // Script menú hamburguesa
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnMenu = document.getElementById('btnMenu');
+        const menuNav = document.getElementById('menuNav');
+        
+        if (btnMenu && menuNav) {
+            btnMenu.addEventListener('click', function() {
+                console.log('Clic en menú hamburguesa'); // Para debug
+                menuNav.classList.toggle('activo');
+            });
+        } else {
+            console.error('No se encontraron los elementos btnMenu o menuNav');
+        }
+    });
+    </script>
 </body>
 </html>
-<script>
-// Script menú hamburguesa
-document.addEventListener('DOMContentLoaded', function() {
-    const btnMenu = document.getElementById('btnMenu');
-    const menuNav = document.getElementById('menuNav');
-    btnMenu.addEventListener('click', function() {
-        menuNav.classList.toggle('activo');
-    });
-});
-</script>
