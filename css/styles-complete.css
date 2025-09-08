@@ -369,7 +369,7 @@ footer .footer-icons a.active {
 footer .footer-icons a img {
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25)) brightness(1.2) contrast(1.2);
 }
 @media (max-width: 700px) {
   footer .footer-icons {

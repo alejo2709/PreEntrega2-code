@@ -177,9 +177,21 @@ nav ul.activo {
         <style>
             .productos-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 32px;
-                margin: 32px 0;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 24px;
+                margin: 24px 0;
+            }
+            @media (max-width: 700px) {
+                .productos-grid {
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                    margin: 12px 0;
+                }
+                .producto-card {
+                    max-width: 96vw;
+                    margin: 0 auto;
+                    padding: 16px 8px 12px 8px;
+                }
             }
             .producto-card {
                 background: #6dd38f;
