@@ -5,7 +5,7 @@
     <title>productos</title>
         <!-- CSS-->
     <link rel="stylesheet" href="../css/styles-complete.css">
-    <script defer src="../assets/js/productos-toggle.js"></script>
+    <script defer src="../assets/js/productos-vermas.js"></script>
 </head>
 <style>
 nav a.active {
@@ -179,7 +179,7 @@ nav ul.activo {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
                 gap: 24px;
-                margin: 24px 0;
+                margin: 24px 5vw;
             }
             @media (max-width: 700px) {
                 .productos-grid {
@@ -202,7 +202,14 @@ nav ul.activo {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                transition: box-shadow 0.2s, transform 0.2s;
+                transition: box-shadow 0.2s, transform 0.2s, max-width 0.2s;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+            @media (max-width: 700px) {
+                .producto-card {
+                    max-width: 96vw !important;
+                }
             }
             .producto-card:hover {
                 box-shadow: 0 6px 24px rgba(0,0,0,0.16);
