@@ -55,8 +55,8 @@
         </div>
     
         <!-- Logo y título -->
-        <div>
-            <img class="logo" src="./assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo">
+        <div style="width:100%;text-align:center;margin:0;padding:0;">
+            <img class="logo" src="./assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo" style="display:block;margin:0 auto;max-width:100%;height:auto;">
         </div>
         <h1>Con E-vo fabricamos energía</h1>
         <!-- Botón menú hamburguesa -->
@@ -123,7 +123,11 @@ Educación y Compromiso</h3>
         justify-content: center;
         align-items: center;
         gap: 32px;
-        margin: 18px 0 0 0;
+        margin: 18px auto 0 auto;
+        width: 100%;
+        max-width: 400px;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
     .footer-icons a {
         display: flex;
@@ -150,7 +154,11 @@ Educación y Compromiso</h3>
     @media (max-width: 700px) {
         .footer-icons {
             gap: 16px;
-            margin: 10px 0 0 0;
+            margin: 10px auto 0 auto;
+            width: 100%;
+            max-width: 300px;
+            padding: 0 10px;
+            justify-content: space-around;
         }
         .footer-icons a {
             width: 40px;
@@ -182,8 +190,9 @@ Educación y Compromiso</h3>
         }
         .footer-icons {
             width: 100% !important;
-            margin: 10px 0 0 0 !important;
-            padding: 0 !important;
+            margin: 10px auto 0 auto !important;
+            padding: 0 10px !important;
+            justify-content: space-around !important;
         }
         body {
             margin-bottom: 0 !important;
