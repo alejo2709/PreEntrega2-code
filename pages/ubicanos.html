@@ -52,6 +52,21 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .footer-icons {
+            gap: 16px !important;
+            margin: 10px auto 0 auto !important;
+            max-width: 300px !important;
+            padding: 0 10px !important;
+            justify-content: space-around !important;
+        }
+        .footer-icons a {
+            width: 40px !important;
+            height: 40px !important;
+        }
+        .footer-icons img {
+            width: 22px !important;
+            height: 22px !important;
+        }
     }
     </style>
 <body>
@@ -60,8 +75,8 @@
             <div><video class="baner" autoplay loop muted>
                 <source src="../assets/videos/verde.mp4" type="video/mp4">
             </video></div>
-            <div>
-                <img class="logo" src="../assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo">
+            <div style="width:100%;text-align:center;margin:0;padding:0;">
+                <img class="logo" src="../assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo" style="display:block;margin:0 auto;max-width:100%;height:auto;">
             </div>
             <h1>Con E-vo fabricamos energía</h1>
             <button class="menu-hamburguesa" id="btnMenu" aria-label="Abrir menú">
@@ -72,7 +87,7 @@
         <li><a class="nav-btn" href="../index.html">inicio</a></li>
         <li><a class="nav-btn" href="./productos.html">productos</a></li>
         <li><a class="nav-btn" href="./nuestro_equipo.html">nuestro equipo</a></li>
-        <li><a class="nav-btn" href="./ubicanos.html">ubicanos</a></li>
+        <li><a class="nav-btn active" href="./ubicanos.html">ubicanos</a></li>
         <li><a class="nav-btn" href="./contacto.html">contacto</a></li>
     </ul>
     </nav>
@@ -99,21 +114,21 @@
                 <source src="../assets/videos/verde.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="footer-icons">
-            <a href="../index.html" title="Inicio">
-                <img src="../assets/iconos/hogar.png" alt="Inicio" />
+        <div class="footer-icons" style="display:flex;justify-content:center;align-items:center;gap:32px;margin:18px auto 0 auto;width:100%;max-width:400px;padding:0 20px;box-sizing:border-box;">
+            <a href="../index.html" title="Inicio" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg, #ffffff, #e6e6e6);border:2px solid rgba(26, 42, 58, 0.1);border-radius:50%;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);width:54px;height:54px;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);text-decoration:none;position:relative;overflow:hidden;">
+                <img src="../assets/iconos/hogar.png" alt="Inicio" style="width:32px;height:32px;filter:contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));transition:all 0.3s ease;" />
             </a>
-            <a href="./productos.html" title="Productos">
-                <img src="../assets/iconos/bateria.png" alt="Productos" />
+            <a href="./productos.html" title="Productos" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg, #ffffff, #e6e6e6);border:2px solid rgba(26, 42, 58, 0.1);border-radius:50%;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);width:54px;height:54px;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);text-decoration:none;position:relative;overflow:hidden;">
+                <img src="../assets/iconos/bateria.png" alt="Productos" style="width:32px;height:32px;filter:contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));transition:all 0.3s ease;" />
             </a>
-            <a href="./nuestro_equipo.html" title="Nuestro equipo">
-                <img src="../assets/iconos/equipo.png" alt="Equipo" />
+            <a href="./nuestro_equipo.html" title="Nuestro equipo" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg, #ffffff, #e6e6e6);border:2px solid rgba(26, 42, 58, 0.1);border-radius:50%;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);width:54px;height:54px;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);text-decoration:none;position:relative;overflow:hidden;">
+                <img src="../assets/iconos/equipo.png" alt="Equipo" style="width:32px;height:32px;filter:contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));transition:all 0.3s ease;" />
             </a>
-            <a href="./ubicanos.html" title="Ubícanos" class="active">
-                <img src="../assets/iconos/ubicacion-del-terreno.png" alt="Ubícanos" />
+            <a href="./ubicanos.html" title="Ubícanos" class="active" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg, #0a1a3a, #1a2a4a);border:2px solid rgba(255, 235, 59, 0.5);border-radius:50%;box-shadow:0 0 20px 6px rgba(10, 26, 58, 0.6), 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);width:54px;height:54px;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);text-decoration:none;position:relative;overflow:hidden;">
+                <img src="../assets/iconos/ubicacion-del-terreno.png" alt="Ubícanos" style="width:32px;height:32px;filter:brightness(0) invert(1) drop-shadow(0 2px 6px rgba(255, 235, 59, 0.4));transition:all 0.3s ease;" />
             </a>
-            <a href="./contacto.html" title="Contacto">
-                <img src="../assets/iconos/libreta-de-direcciones.png" alt="Contacto" />
+            <a href="./contacto.html" title="Contacto" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg, #ffffff, #e6e6e6);border:2px solid rgba(26, 42, 58, 0.1);border-radius:50%;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);width:54px;height:54px;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);text-decoration:none;position:relative;overflow:hidden;">
+                <img src="../assets/iconos/libreta-de-direcciones.png" alt="Contacto" style="width:32px;height:32px;filter:contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));transition:all 0.3s ease;" />
             </a>
         </div>
         </div>

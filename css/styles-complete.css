@@ -35,7 +35,7 @@ footer .footer-icons a, .bateria-litio, header .logo {
 body {
   font-size: 18px;
   line-height: 1.7;
-  color: #23272f;
+  color: #1a1a1a;
   background-color: rgb(83, 133, 91);
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
@@ -44,10 +44,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #1a2a3a;
+  color: #0d1b2a;
   letter-spacing: 0.02em;
   margin-bottom: 0.5em;
   text-align: center;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
 h1.header-title, header h1, h2.header-title, h3.header-title, h4.header-title, h5.header-title, h6.header-title {
   font-size: 2.1rem;
@@ -60,8 +61,9 @@ h1.header-title, header h1, h2.header-title, h3.header-title, h4.header-title, h
 
 p, li, label, input, textarea, button, a {
   font-size: 1em;
-  color: #05132f;
+  color: #0a1929;
   line-height: 1.7;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
 }
 
 h1 {
@@ -80,6 +82,12 @@ h3 {
 p {
   text-align: center;
   margin-bottom: 10px;
+  font-weight: 500;
+  color: #0d1b2a;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
 }
 
 header {
@@ -147,10 +155,14 @@ header nav ul li a {
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
   font-weight: 600;
-  color: #a5c4b0 !important;
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 header nav ul li a.active {
-  color: #0a1a3a !important;
+  color: #ffeb3b !important;
+  background: rgba(255, 235, 59, 0.15);
+  border: 1px solid rgba(255, 235, 59, 0.3);
   position: relative;
   animation: activeLinkPulse 1.2s infinite alternate;
 }
@@ -183,18 +195,20 @@ header nav ul li a:not(.nav-btn) {
 
 @keyframes activeLinkPulse {
   0% {
-    text-shadow: 0 0 0 #0a1a3a;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35), 0 1px 0 #222;
+    box-shadow: 0 0 0 rgba(255, 235, 59, 0);
   }
   100% {
-    text-shadow: 0 0 12px #0a1a3a, 0 0 4px #f0eded;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35), 0 1px 0 #222, 0 0 15px rgba(255, 235, 59, 0.8);
+    box-shadow: 0 0 15px 2px rgba(255, 235, 59, 0.3);
   }
 }
 @keyframes iconGlow {
   0% {
-    box-shadow: 0 0 0 rgba(10, 26, 58, 0.8);
+    box-shadow: 0 0 20px 6px rgba(10, 26, 58, 0.6), 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   100% {
-    box-shadow: 0 0 16px 8px rgba(10, 26, 58, 0.8), 0 2px 8px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 0 25px 8px rgba(10, 26, 58, 0.8), 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 }
 .contenedor {
@@ -320,56 +334,69 @@ header nav ul li a:not(.nav-btn) {
 }
 
 footer {
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(233, 236, 239, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px 0;
   text-align: center;
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #1a1a1a;
   margin-top: 20px;
   position: relative;
   z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 footer .footer-icons {
   gap: 32px;
   margin: 18px 0 0 0;
 }
 footer .footer-icons a {
-  background: transparent;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
   color: #1a2a3a !important;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 22px;
+  border: 2px solid rgba(26, 42, 58, 0.1);
+  border-radius: 50%;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   text-decoration: none;
-  margin: 0 4px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 54px;
   height: 54px;
-  padding: 0;
-  background: transparent !important;
+  position: relative;
+  overflow: hidden;
 }
 footer .footer-icons a:hover, footer .footer-icons a:focus {
-  background: rgba(0, 0, 0, 0);
-  transform: translateY(-2px) scale(1.04);
+  background: linear-gradient(145deg, #f0f8ff, #e0e6ff);
+  border-color: rgba(26, 42, 58, 0.3);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 footer .footer-icons a:hover {
-  background: #1a2a3a !important;
-  color: #f0eded !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(145deg, #1a2a3a, #2a3a4a) !important;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(26, 42, 58, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   transform: translateY(-6px) scale(1.08);
 }
+footer .footer-icons a:hover img {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
 footer .footer-icons a.active {
-  background: #0a1a3a !important;
-  box-shadow: 0 0 16px 4px rgba(10, 26, 58, 0.8), 0 2px 8px rgba(0, 0, 0, 0.13);
-  animation: iconGlow 1.2s infinite alternate;
+  background: linear-gradient(145deg, #0a1a3a, #1a2a4a) !important;
+  border-color: rgba(255, 235, 59, 0.5);
+  box-shadow: 0 0 20px 6px rgba(10, 26, 58, 0.6), 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: iconGlow 1.5s infinite alternate;
+}
+footer .footer-icons a.active img {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(255, 235, 59, 0.4));
 }
 footer .footer-icons a img {
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  filter: contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
 }
 @media (max-width: 700px) {
   footer .footer-icons {
