@@ -1,6 +1,6 @@
 @import url("menu-hamburguesa.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
-footer .footer-icons, .contenedor2, header nav ul, header {
+.contenedor2, header nav ul, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ header nav ul {
   padding: 0;
 }
 
-footer .footer-icons a, .bateria-litio, header .logo {
+.bateria-litio, header .logo {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -346,70 +346,34 @@ footer {
   z-index: 1000;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
-footer .footer-icons {
-  gap: 32px;
-  margin: 18px 0 0 0;
+
+/* Estilos específicos del footer-icons con la plantilla de ubicanos */
+.footer-icons a.active {
+  background: #0a1a3a !important;
+  box-shadow: 0 0 16px 4px #0a1a3acc, 0 2px 8px rgba(0,0,0,0.13);
+  animation: iconGlow 1.2s infinite alternate;
 }
-footer .footer-icons a {
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  color: #1a2a3a !important;
-  border: 2px solid rgba(26, 42, 58, 0.1);
-  border-radius: 50%;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  position: relative;
-  overflow: hidden;
+
+@keyframes iconGlow {
+  0% { box-shadow: 0 0 0 #0a1a3acc; }
+  100% { box-shadow: 0 0 16px 8px #0a1a3acc, 0 2px 8px rgba(0,0,0,0.13); }
 }
-footer .footer-icons a:hover, footer .footer-icons a:focus {
-  background: linear-gradient(145deg, #f0f8ff, #e0e6ff);
-  border-color: rgba(26, 42, 58, 0.3);
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-footer .footer-icons a:hover {
-  background: linear-gradient(145deg, #1a2a3a, #2a3a4a) !important;
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 6px 20px rgba(26, 42, 58, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transform: translateY(-6px) scale(1.08);
-}
-footer .footer-icons a:hover img {
-  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-footer .footer-icons a.active {
-  background: linear-gradient(145deg, #0a1a3a, #1a2a4a) !important;
-  border-color: rgba(255, 235, 59, 0.5);
-  box-shadow: 0 0 20px 6px rgba(10, 26, 58, 0.6), 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  animation: iconGlow 1.5s infinite alternate;
-}
-footer .footer-icons a.active img {
-  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(255, 235, 59, 0.4));
-}
-footer .footer-icons a img {
-  width: 32px;
-  height: 32px;
-  filter: contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-  transition: all 0.3s ease;
-}
+
 @media (max-width: 700px) {
-  footer .footer-icons {
-    gap: 16px;
-    margin: 10px 0 0 0;
+  .footer-icons {
+    gap: 16px !important;
+    margin: 10px auto 0 auto !important;
+    max-width: 300px !important;
+    padding: 0 10px !important;
+    justify-content: space-around !important;
   }
-  footer .footer-icons a {
-    width: 40px;
-    height: 40px;
+  .footer-icons a {
+    width: 40px !important;
+    height: 40px !important;
   }
-  footer .footer-icons a img {
-    width: 22px;
-    height: 22px;
+  .footer-icons img {
+    width: 22px !important;
+    height: 22px !important;
   }
 }
 
