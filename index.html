@@ -10,6 +10,7 @@
     <meta name="author" content="E-vo Uruguay">
     <!-- CSS-->
     <link rel="stylesheet" href="./css/styles-complete.css">
+    <link rel="stylesheet" href="./css/menu-hamburguesa.css">
 </head>
 <!-- Sin animación de activo en index -->
 <body>
@@ -153,16 +154,15 @@ Educación y Compromiso</h3>
             <img src="./assets/iconos/whatsapp.png" alt="WhatsApp Icon">
         </a>
     </div>    
-</body>
-</html>
-        <script>
-        // Script menú hamburguesa
-        document.addEventListener('DOMContentLoaded', function() {
-            const btnMenu = document.getElementById('btnMenu');
-            const menuNav = document.getElementById('menuNav');
-            btnMenu.addEventListener('click', function() {
-                menuNav.classList.toggle('activo');
-            });
+    <script>
+    // Script menú hamburguesa
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnMenu = document.getElementById('btnMenu');
+        const menuNav = document.getElementById('menuNav');
+        btnMenu.addEventListener('click', function() {
+            menuNav.classList.toggle('activo');
         });
-        </script>
+    });
+    </script>
+</body>
 </html>
