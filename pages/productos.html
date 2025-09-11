@@ -5,6 +5,12 @@
     <title>productos</title>
         <!-- CSS-->
     <link rel="stylesheet" href="../css/styles-complete.css">
+    <link rel="stylesheet" href="../css/performance-optimizations.css">
+    
+    <!-- Preload crítico -->
+    <link rel="preload" href="../assets/iconos/venta.png" as="image">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
     <script defer src="../assets/js/productos-vermas.js"></script>
     <style>
     html, body {
@@ -121,26 +127,14 @@ nav ul.activo {
     100% { box-shadow: 0 0 16px 8px #0a1a3acc, 0 2px 8px rgba(0,0,0,0.13); }
 }
 </style>
-        height: 22px !important;
-    }
-}
-</style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>productos</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- CSS personalizado -->
-    <link rel="stylesheet" href="../css/styles-complete.css">
-    <link rel="stylesheet" href="../css/menu-hamburguesa.css">
 </head>
 <body>
         <header style="position:relative;">
-            <div><video class="baner" autoplay loop muted>
+            <div><video class="baner" autoplay loop muted preload="metadata" loading="lazy">
                 <source src="../assets/videos/verde.mp4" type="video/mp4">
             </video></div>
             <div style="width:100%;text-align:center;margin:0;padding:0;">
-                <img class="logo" src="../assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo" style="display:block;margin:0 auto;max-width:100%;height:auto;">
+                <img class="logo" src="../assets/img/62c644a5-62bf-4b61-8e01-24cfbf92c7a6.jpeg" alt="logo de E-vo" style="display:block;margin:0 auto;max-width:100%;height:auto;" loading="lazy">
             </div>
             <h1>Con E-vo fabricamos energía</h1>
             <button class="menu-hamburguesa" id="btnMenu" aria-label="Abrir menú">
@@ -162,7 +156,7 @@ nav ul.activo {
 
         <div class="productos-grid">
             <div class="producto-card">
-                <img src="../assets/img/f1d6167a-4198-4c8c-a263-fdc0b976805d.jpg" alt="Batería de Litio 60V 12Ah">
+                <img src="../assets/img/f1d6167a-4198-4c8c-a263-fdc0b976805d.jpg" alt="Batería de Litio 60V 12Ah" loading="lazy">
                 <h5>Batería de Litio 60V 12Ah</h5>
                 <p style="display:none;">Ideal para motos eléctricas City Coco, City, Urban y otros modelos. Más autonomía, potencia constante y menor tiempo de carga.<br>
                 <b>Voltaje:</b> 60V<br>
@@ -173,7 +167,7 @@ nav ul.activo {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="../assets/img/33432885-7acb-49b3-aaa6-8b5c59dcef46.jpg" alt="Batería de Litio 48V 12Ah">
+                <img src="../assets/img/33432885-7acb-49b3-aaa6-8b5c59dcef46.jpg" alt="Batería de Litio 48V 12Ah" loading="lazy">
                 <h5>Batería de Litio 48V 12Ah</h5>
                 <p style="display:none;">Para bicicletas eléctricas, scooters y más. Celdas clase A de alta descarga.<br>
                 <b>Voltaje:</b> 48V<br>
@@ -183,7 +177,7 @@ nav ul.activo {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="../assets/img/b23a0806-ad9a-40f1-b44c-8c571ccb52ef.jpg" alt="Batería de Litio 60V 25Ah">
+                <img src="../assets/img/b23a0806-ad9a-40f1-b44c-8c571ccb52ef.jpg" alt="Batería de Litio 60V 25Ah" loading="lazy">
                 <h5>Batería de Litio 60V 25Ah</h5>
                 <p style="display:none;">Para scooters y motos eléctricas de media y alta potencia.<br>
                 <b>Voltaje:</b> 60V<br>
@@ -193,7 +187,7 @@ nav ul.activo {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="../assets/img/83fbfe96-fb76-48e0-9784-c530a4efcfec.jpg" alt="Cubiertas Macizas Xiaomi">
+                <img src="../assets/img/83fbfe96-fb76-48e0-9784-c530a4efcfec.jpg" alt="Cubiertas Macizas Xiaomi" loading="lazy">
                 <h5>Cubiertas Macizas Xiaomi</h5>
                 <p style="display:none;">Olvidate de los pinchazos y el mantenimiento. Compatibles con modelos Xiaomi M365, Pro, 1S.<br>
                 <b>Material:</b> Goma maciza de alta resistencia<br>
@@ -203,7 +197,7 @@ nav ul.activo {
                 <a href="#" class="btn btn-success">Ver más</a>
             </div>
             <div class="producto-card">
-                <img src="../assets/img/39b6af59-d05a-4319-ad50-54cf49881d16.jpg" alt="Celdas 18650 DL 2500mAh">
+                <img src="../assets/img/39b6af59-d05a-4319-ad50-54cf49881d16.jpg" alt="Celdas 18650 DL 2500mAh" loading="lazy">
                 <h5>Celdas 18650 DL 2500mAh</h5>
                 <p style="display:none;">Alta descarga y versatilidad para proyectos de energía portátil.<br>
                 <b>Capacidad:</b> 2500mAh<br>
@@ -283,20 +277,20 @@ nav ul.activo {
 
         <div class="whatsapp">
         <a href="https://api.whatsapp.com/send?phone=59897537913" target="_blank">
-            <img src="../assets/iconos/whatsapp.png" alt="WhatsApp" style="width: 48px; height: 48px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));">
+            <img src="../assets/iconos/whatsapp.png" alt="WhatsApp" style="width: 48px; height: 48px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.10));" loading="lazy">
         </a>
     </div>    
 
     <footer>
         <div>
         <div style="width:100%;max-width:750px;margin:0 auto 14px auto;overflow:hidden;border-radius:16px;box-shadow:0 2px 14px rgba(0,0,0,0.10);">
-            <video class="baner" autoplay loop muted style="width:100%;height:120px;object-fit:cover;display:block;">
+            <video class="baner" autoplay loop muted preload="none" loading="lazy" style="width:100%;height:120px;object-fit:cover;display:block;">
                 <source src="../assets/videos/verde.mp4" type="video/mp4">
             </video>
         </div>
         <div class="footer-icons" style="display:flex;justify-content:center;align-items:center;gap:32px;margin:18px auto 0 auto;width:100%;max-width:400px;padding:0 20px;box-sizing:border-box;">
             <a href="../index.html" title="Inicio" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg, #ffffff, #e6e6e6);border:2px solid rgba(26, 42, 58, 0.1);border-radius:50%;box-shadow:0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);width:54px;height:54px;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);text-decoration:none;position:relative;overflow:hidden;">
-                <img src="../assets/iconos/hogar.png" alt="Inicio" style="width:32px;height:32px;filter:contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));transition:all 0.3s ease;" />
+                <img src="../assets/iconos/hogar.png" alt="Inicio" style="width:32px;height:32px;filter:contrast(1.2) saturate(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));transition:all 0.3s ease;" loading="lazy" />
             </a>
             <a href="./productos.html" title="Productos" class="active" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg, #0a1a3a, #1a2a4a);border:2px solid rgba(255, 235, 59, 0.5);border-radius:50%;box-shadow:0 0 20px 6px rgba(10, 26, 58, 0.6), 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);width:54px;height:54px;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);text-decoration:none;position:relative;overflow:hidden;">
                 <img src="../assets/iconos/bateria.png" alt="Productos" style="width:32px;height:32px;filter:brightness(0) invert(1) drop-shadow(0 2px 6px rgba(255, 235, 59, 0.4));transition:all 0.3s ease;" />
@@ -334,5 +328,8 @@ nav ul.activo {
         }
     });
     </script>
+    
+    <!-- Scripts de optimización -->
+    <script src="../js/performance-optimizer.js" defer></script>
 </body>
 </html>
