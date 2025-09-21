@@ -1,1 +1,0 @@
-// ...código original migrado desde assets/js/productos-info-mobile.js
